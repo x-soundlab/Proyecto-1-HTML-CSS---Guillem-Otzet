@@ -57,8 +57,8 @@ a {
   --vignette-hero: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 94%,
-    rgba(0, 0, 0, 0.35) 97%,
+    rgba(0, 0, 0, 0) 85%,
+    rgba(0, 0, 0, 0.35) 92%,
     rgba(0, 0, 0, 0.9) 100%
   );
 
@@ -68,7 +68,7 @@ a {
     rgba(0, 0, 0, 0.75) 12%,
     rgba(0, 0, 0, 0.55) 32%,
     rgba(0, 0, 0, 0.55) 65%,
-    rgba(0, 0, 0, 0.78) 75%,
+    rgba(0, 0, 0, 0.78) 85%,
     rgba(0, 0, 0, 0.9) 100%
   );
 
@@ -76,8 +76,8 @@ a {
     to right,
     rgba(0, 0, 0, 0.55) 0%,
     rgba(0, 0, 0, 0.4) 18%,
-    rgba(0, 0, 0, 0.16) 55%,
-    rgba(0, 0, 0, 0) 95%
+    rgba(0, 0, 0, 0.16) 65%,
+    rgba(0, 0, 0, 0) 100%
   );
 
   --side-right-soft: linear-gradient(
@@ -85,7 +85,7 @@ a {
     rgba(0, 0, 0, 0.7) 0%,
     rgba(0, 0, 0, 0.45) 18%,
     rgba(0, 0, 0, 0.15) 35%,
-    rgba(0, 0, 0, 0) 60%
+    rgba(0, 0, 0, 0) 95%
   );
 
   --side-right-strong: linear-gradient(
@@ -153,12 +153,13 @@ a {
   outline-offset: 3px;
 }
 
-/* Hover suave */
+/* Hover suave: aquí añadimos .works-banner img */
 .hover-zoom,
 .nav-link,
 .work-card,
 .about-photo img,
 .about-header img,
+.works-banner img,
 .contact-box,
 .about-copy {
   transition:
@@ -173,6 +174,7 @@ a {
 .work-card:focus-visible,
 .about-photo img:hover,
 .about-header img:hover,
+.works-banner img:hover,
 .contact-box:hover,
 .about-copy:hover {
   transform: translateY(-2px);
@@ -418,7 +420,6 @@ body {
   padding-bottom: 2rem;
 }
 
-/* Banner más grande */
 .works-banner {
   display: flex;
   justify-content: center;
@@ -443,7 +444,6 @@ body {
   margin: 0 0 2rem;
 }
 
-/* Título un poco más abajo */
 .section-title--works {
   margin-top: 0.6rem;
   margin-bottom: 1.4rem;
