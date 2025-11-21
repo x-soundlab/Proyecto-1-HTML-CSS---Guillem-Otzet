@@ -1,4 +1,4 @@
-* Reset */
+/* Reset básico */
 *,
 *::before,
 *::after {
@@ -30,7 +30,7 @@ a {
   text-decoration: none;
 }
 
-/* Variables */
+/* Variables globales */
 :root {
   --font-title: "Bebas Neue", sans-serif;
   --font-body: "Alef", sans-serif;
@@ -54,7 +54,7 @@ a {
   --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.5);
   --shadow-strong: 0 20px 45px rgba(0, 0, 0, 0.75);
 
-  /* Hero: franja fina abajo */
+  /* Gradientes generales */
   --vignette-hero: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -63,7 +63,6 @@ a {
     rgba(0, 0, 0, 0.9) 100%
   );
 
-  /* Secciones: un poco más oscuro en general */
   --vignette-section: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.92) 0%,
@@ -74,7 +73,6 @@ a {
     rgba(0, 0, 0, 0.94) 100%
   );
 
-  /* Viñeta izquierda suave */
   --vignette-left-soft: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.55) 0%,
@@ -83,7 +81,6 @@ a {
     rgba(0, 0, 0, 0) 95%
   );
 
-  /* Derecha suave (Guillem) */
   --side-right-soft: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.7) 0%,
@@ -92,7 +89,6 @@ a {
     rgba(0, 0, 0, 0) 60%
   );
 
-  /* Derecha fuerte (Fernando) */
   --side-right-strong: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.9) 0%,
@@ -102,7 +98,6 @@ a {
     rgba(0, 0, 0, 0) 100%
   );
 
-  /* Hero: lado izquierdo largo e intenso */
   --side-left-hero: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.98) 0%,
@@ -113,7 +108,6 @@ a {
     rgba(0, 0, 0, 0) 100%
   );
 
-  /* Contact más oscuro */
   --overlay-contact-dark: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.9) 0%,
@@ -122,7 +116,6 @@ a {
     rgba(0, 0, 0, 0.9) 100%
   );
 
-  /* Extra oscurecido para works */
   --overlay-section-dark: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.55) 0%,
@@ -130,7 +123,7 @@ a {
   );
 }
 
-/* Accesibilidad y helpers */
+/* Accesibilidad básica */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -161,7 +154,7 @@ a {
   outline-offset: 3px;
 }
 
-/* Hover suave */
+/* Efecto hover suave en elementos interactivos */
 .hover-zoom,
 .nav-link,
 .work-card,
@@ -218,7 +211,7 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Header y nav */
+/* HEADER + NAV */
 .site-header {
   position: fixed;
   inset-inline: 0;
@@ -271,7 +264,7 @@ body {
   box-shadow: none;
 }
 
-/* Burger */
+/* Menú burger */
 .nav-toggle {
   display: none;
 }
@@ -295,7 +288,7 @@ body {
   margin-top: 0;
 }
 
-/* Hero */
+/* HERO */
 .section--hero {
   padding-top: var(--header-height);
   background-image:
@@ -328,7 +321,7 @@ body {
   transform: translateY(-1px) scale(1.01);
 }
 
-/* About */
+/* WHO WE ARE */
 .section--about-g {
   background-image:
     var(--vignette-section),
@@ -409,13 +402,13 @@ body {
 }
 
 .about-photo img {
-  width: min(24rem, 32vw);
+  width: min(26rem, 32vw);
   border-radius: var(--radius-photo);
   object-fit: cover;
   box-shadow: var(--shadow-strong);
 }
 
-/* Works */
+/* WHAT WE DO */
 .section--works {
   background-image:
     var(--overlay-section-dark),
@@ -424,16 +417,15 @@ body {
     url("assets/images/CRI05266.jpg");
   background-position: center, center, left top, center;
   background-size: cover, cover, auto, cover;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
 }
 
-/* Banner grande */
 .works-banner {
   display: flex;
   justify-content: center;
   margin-bottom: 0.9rem;
-  max-height: 280px;
+  max-height: 260px;
   overflow: hidden;
 }
 
@@ -444,6 +436,7 @@ body {
   margin-bottom: -10px;
 }
 
+/* Títulos de sección */
 .section-title {
   font-family: var(--font-title);
   text-align: center;
@@ -458,6 +451,7 @@ body {
   margin-bottom: 1.4rem;
 }
 
+/* Grid de trabajos */
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -470,7 +464,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
   border-radius: var(--radius-card);
   border: 1px solid var(--border-soft);
-  padding: 0.9rem;
+  padding: 1.1rem;
   text-align: center;
   box-shadow: var(--shadow-soft);
 }
@@ -479,7 +473,7 @@ body {
   border-radius: 14px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
 }
 
 .work-card h3 {
@@ -497,7 +491,7 @@ body {
   margin: 0.25rem auto 0;
 }
 
-/* Contact */
+/* CONTACT */
 .section--contact {
   background-image:
     var(--overlay-contact-dark),
@@ -550,6 +544,7 @@ body {
   text-underline-offset: 2px;
 }
 
+/* Formulario */
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -608,7 +603,7 @@ button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
-/* Social + footer */
+/* Redes y footer */
 .social-follow {
   margin-top: 2.4rem;
   text-align: center;
@@ -634,6 +629,7 @@ button:hover {
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .social-links img {
@@ -654,7 +650,7 @@ button:hover {
   color: var(--color-text-soft);
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .burger {
     display: inline-block;
@@ -702,17 +698,19 @@ button:hover {
     transform: translateY(0);
   }
 
+  /* Hero en móvil: logo más grande y centrado */
   .hero-inner {
     justify-content: center;
     text-align: center;
+    padding-block: 2.5rem;
   }
 
   .hero-logo {
-    max-width: 70%;
-    margin-left: 0;
-    margin-bottom: 0;
+    max-width: 92%;
+    margin-bottom: 1.5rem;
   }
 
+  /* About en columna */
   .about-layout,
   .about-layout--reverse {
     grid-template-columns: 1fr;
@@ -728,6 +726,7 @@ button:hover {
     width: min(18rem, 70vw);
   }
 
+  /* Formulario en una columna */
   .contact-form {
     grid-template-columns: 1fr;
   }
@@ -740,7 +739,7 @@ button:hover {
     height: 40px;
   }
 
-  
+  /* Banner WHAT WE DO en móvil: muy grande tipo cabecera WHO WE ARE */
   .works-banner {
     max-height: none;
     overflow: hidden;
@@ -748,12 +747,27 @@ button:hover {
   }
 
   .works-banner img {
-    width: 250%;
+    width: 220%;
     max-width: none;
     height: auto;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: -5%; 
+    margin-left: -10%;
+  }
+
+  /* Contact más fluido en móvil */
+  .section--contact > .container {
+    align-items: stretch;
+  }
+
+  .contact-box {
+    max-width: 100%;
+    padding: 1.8rem 1.8rem;
+  }
+
+  .social-follow {
+    margin-top: 2rem;
+    padding-inline: 0.5rem;
   }
 }
 
@@ -772,16 +786,27 @@ button:hover {
   }
 
   .contact-box {
-    padding-inline: 1.3rem;
+    padding: 1.6rem 1.2rem;
+  }
+
+  .contact-form {
+    gap: 0.8rem;
+  }
+
+  .input-control {
+    font-size: 0.95rem;
   }
 
   .social-follow h3 {
     font-size: 1.2rem;
   }
 
+  .social-links img {
+    height: 34px;
+  }
 
   .works-banner img {
     width: 250%;
-    margin-left: -5%;
+    margin-left: -20%;
   }
 }

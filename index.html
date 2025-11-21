@@ -16,15 +16,20 @@
     content="portafolio, sound design, aynix, musica, proyectos, html css"
   />
 
+  <!-- Fuentes Google -->
   <link
     href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Bebas+Neue&display=swap"
     rel="stylesheet"
   />
+
+  <!-- Estilos principales -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Enlace para saltar al contenido principal (accesibilidad) -->
   <a class="skip-link" href="#hero">Skip to main content</a>
 
+  <!-- HEADER + NAV -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#hero" class="logo-link">
@@ -35,8 +40,10 @@
         />
       </a>
 
+      <!-- h1 oculto para SEO / accesibilidad -->
       <h1 class="visually-hidden">Aynix.x Soundlab · Portfolio</h1>
 
+      <!-- Menú burger en móvil -->
       <input id="nav-toggle" class="nav-toggle" type="checkbox" />
       <label for="nav-toggle" class="burger" aria-label="Open main menu">
         <span></span><span></span><span></span>
@@ -54,6 +61,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section id="hero" class="section section--hero">
       <div class="container hero-inner">
         <img
@@ -64,6 +72,7 @@
       </div>
     </section>
 
+    <!-- WHO WE ARE · GUILLEM -->
     <section id="about" class="section section--about section--about-g">
       <div class="container">
         <div class="about-layout">
@@ -101,6 +110,7 @@
       </div>
     </section>
 
+    <!-- WHO WE ARE · FERNANDO -->
     <section
       id="about-fernando"
       class="section section--about section--about-f"
@@ -142,8 +152,10 @@
       </div>
     </section>
 
+    <!-- WHAT WE DO -->
     <section id="works" class="section section--works">
       <div class="container">
+        <!-- Banner grande WHAT WE DO -->
         <div class="works-banner">
           <img
             src="assets/images/what-we-do-banner.png"
@@ -151,8 +163,10 @@
           />
         </div>
 
+        <!-- Título bajo el banner -->
         <h2 class="section-title section-title--works">WHAT WE DO – AYNIX.X</h2>
 
+        <!-- Grid de proyectos -->
         <div class="works-grid">
           <a
             class="work-card"
@@ -227,6 +241,7 @@
       </div>
     </section>
 
+    <!-- CONTACT + REDES -->
     <section id="contact" class="section section--contact">
       <div class="container">
         <div class="contact-box">
@@ -293,6 +308,7 @@
           </form>
         </div>
 
+        <!-- Redes sociales debajo del formulario -->
         <section class="social-follow" aria-label="Follow Aynix.x on social media">
           <h3>Follow us on our social media</h3>
           <div class="social-links">
@@ -330,6 +346,7 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 Aynix.x · All rights reserved</p>
