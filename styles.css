@@ -747,7 +747,7 @@ button:hover {
   }
 
   .works-banner img {
-    width: 220%;
+    width: 200%;
     max-width: none;
     height: auto;
     margin-top: 0;
@@ -806,7 +806,7 @@ button:hover {
   }
 
   .works-banner img {
-    width: 250%;
+    width: 10%;
     margin-left: -20%;
   }
 }
