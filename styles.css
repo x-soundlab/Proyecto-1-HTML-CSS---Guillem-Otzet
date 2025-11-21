@@ -54,7 +54,7 @@ a {
   --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.5);
   --shadow-strong: 0 20px 45px rgba(0, 0, 0, 0.75);
 
-  /* Gradientes */
+  /* Gradientes generales */
   --vignette-hero: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -421,16 +421,20 @@ body {
   padding-bottom: 3rem;
 }
 
-/* Banner centrado y responsivo (sin trucos) */
+/* Banner grande y centrado */
 .works-banner {
   display: flex;
   justify-content: center;
   margin-bottom: 0.9rem;
+  overflow: hidden;
 }
 
 .works-banner img {
-  width: min(1100px, 100%);
+  width: 140%;       /* más grande que el contenedor */
+  max-width: none;
   height: auto;
+  display: block;
+  margin: 0 auto;    /* centrado, recorte simétrico */
 }
 
 /* Títulos de sección */
@@ -695,7 +699,7 @@ button:hover {
     transform: translateY(0);
   }
 
-  /* Hero en móvil: logo grande y centrado */
+  /* Hero en móvil: logo más grande y centrado */
   .hero-inner {
     justify-content: center;
     text-align: center;
@@ -734,6 +738,11 @@ button:hover {
 
   .social-links img {
     height: 40px;
+  }
+
+  /* Banner WHAT WE DO en móvil: aún más grande pero centrado */
+  .works-banner img {
+    width: 190%;
   }
 
   /* Contact más fluido en móvil */
@@ -784,5 +793,10 @@ button:hover {
 
   .social-links img {
     height: 34px;
+  }
+
+  /* En móviles pequeños, el banner ocupa aún más, pero sigue centrado */
+  .works-banner img {
+    width: 220%;
   }
 }
