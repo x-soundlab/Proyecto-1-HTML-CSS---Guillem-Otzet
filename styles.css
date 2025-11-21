@@ -1,4 +1,4 @@
-/* Reset */
+* Reset */
 *,
 *::before,
 *::after {
@@ -54,40 +54,45 @@ a {
   --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.5);
   --shadow-strong: 0 20px 45px rgba(0, 0, 0, 0.75);
 
+  /* Hero: franja fina abajo */
   --vignette-hero: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 85%,
-    rgba(0, 0, 0, 0.35) 92%,
+    rgba(0, 0, 0, 0) 94%,
+    rgba(0, 0, 0, 0.35) 97%,
     rgba(0, 0, 0, 0.9) 100%
   );
 
+  /* Secciones: un poco más oscuro en general */
   --vignette-section: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.75) 12%,
-    rgba(0, 0, 0, 0.55) 32%,
-    rgba(0, 0, 0, 0.55) 65%,
-    rgba(0, 0, 0, 0.78) 85%,
-    rgba(0, 0, 0, 0.9) 100%
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.8) 14%,
+    rgba(0, 0, 0, 0.6) 35%,
+    rgba(0, 0, 0, 0.6) 65%,
+    rgba(0, 0, 0, 0.82) 80%,
+    rgba(0, 0, 0, 0.94) 100%
   );
 
+  /* Viñeta izquierda suave */
   --vignette-left-soft: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.55) 0%,
     rgba(0, 0, 0, 0.4) 18%,
-    rgba(0, 0, 0, 0.16) 65%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 0.16) 55%,
+    rgba(0, 0, 0, 0) 95%
   );
 
+  /* Derecha suave (Guillem) */
   --side-right-soft: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.7) 0%,
     rgba(0, 0, 0, 0.45) 18%,
     rgba(0, 0, 0, 0.15) 35%,
-    rgba(0, 0, 0, 0) 95%
+    rgba(0, 0, 0, 0) 60%
   );
 
+  /* Derecha fuerte (Fernando) */
   --side-right-strong: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.9) 0%,
@@ -97,6 +102,7 @@ a {
     rgba(0, 0, 0, 0) 100%
   );
 
+  /* Hero: lado izquierdo largo e intenso */
   --side-left-hero: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.98) 0%,
@@ -107,6 +113,7 @@ a {
     rgba(0, 0, 0, 0) 100%
   );
 
+  /* Contact más oscuro */
   --overlay-contact-dark: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.9) 0%,
@@ -115,10 +122,11 @@ a {
     rgba(0, 0, 0, 0.9) 100%
   );
 
+  /* Extra oscurecido para works */
   --overlay-section-dark: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.75) 100%
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.82) 100%
   );
 }
 
@@ -153,7 +161,7 @@ a {
   outline-offset: 3px;
 }
 
-/* Hover suave: aquí añadimos .works-banner img */
+/* Hover suave */
 .hover-zoom,
 .nav-link,
 .work-card,
@@ -420,6 +428,7 @@ body {
   padding-bottom: 2rem;
 }
 
+/* Banner grande */
 .works-banner {
   display: flex;
   justify-content: center;
@@ -731,8 +740,20 @@ button:hover {
     height: 40px;
   }
 
+  
   .works-banner {
-    max-height: 180px;
+    max-height: none;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+  }
+
+  .works-banner img {
+    width: 250%;
+    max-width: none;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -5%; 
   }
 }
 
@@ -756,5 +777,11 @@ button:hover {
 
   .social-follow h3 {
     font-size: 1.2rem;
+  }
+
+
+  .works-banner img {
+    width: 250%;
+    margin-left: -5%;
   }
 }
