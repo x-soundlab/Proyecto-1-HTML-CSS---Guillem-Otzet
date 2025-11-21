@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -35,8 +35,8 @@ a {
   --font-title: "Bebas Neue", sans-serif;
   --font-body: "Alef", sans-serif;
 
-  --color-bg: #000000;
-  --color-text: #ffffff;
+  --color-bg: #000;
+  --color-text: #fff;
   --color-text-soft: #e0e0e0;
   --color-accent: #e3f1fa;
 
@@ -54,7 +54,6 @@ a {
   --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.5);
   --shadow-strong: 0 20px 45px rgba(0, 0, 0, 0.75);
 
-  /* HERO: franja de viñeta muy baja (pocos px en la parte inferior) */
   --vignette-hero: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -63,67 +62,67 @@ a {
     rgba(0, 0, 0, 0.9) 100%
   );
 
-  /* SECCIONES: viñeta fuerte arriba y abajo */
   --vignette-section: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.98) 0%,
-    rgba(0, 0, 0, 0.9) 10%,
-    rgba(0, 0, 0, 0.7) 30%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0.9) 65%,
-    rgba(0, 0, 0, 0.98) 100%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.75) 12%,
+    rgba(0, 0, 0, 0.55) 32%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(0, 0, 0, 0.78) 75%,
+    rgba(0, 0, 0, 0.9) 100%
   );
 
-  /* Viñeta suave a la izquierda para secciones */
   --vignette-left-soft: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.45) 15%,
-    rgba(0, 0, 0, 0.12) 25%,
-    rgba(0, 0, 0, 0) 45%
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.4) 18%,
+    rgba(0, 0, 0, 0.16) 55%,
+    rgba(0, 0, 0, 0) 95%
   );
 
-  /* Viñeta derecha suave (Guillem) */
   --side-right-soft: linear-gradient(
     to left,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 18%,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.45) 18%,
     rgba(0, 0, 0, 0.15) 35%,
     rgba(0, 0, 0, 0) 60%
   );
 
-  /* Viñeta fuerte derecha (Fernando) */
   --side-right-strong: linear-gradient(
     to left,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.8) 12%,
-    rgba(0, 0, 0, 0.45) 25%,
-    rgba(0, 0, 0, 0.05) 65%,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 12%,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(0, 0, 0, 0.05) 75%,
     rgba(0, 0, 0, 0) 100%
   );
 
-  /* HERO: lado izquierdo casi media pantalla */
   --side-left-hero: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.96) 0%,
-    rgba(0, 0, 0, 0.92) 20%,
-    rgba(0, 0, 0, 0.85) 35%,
-    rgba(0, 0, 0, 0.55) 50%,
-    rgba(0, 0, 0, 0.15) 70%,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.95) 28%,
+    rgba(0, 0, 0, 0.88) 45%,
+    rgba(0, 0, 0, 0.6) 62%,
+    rgba(0, 0, 0, 0.25) 80%,
     rgba(0, 0, 0, 0) 100%
   );
 
-  /* Overlay extra oscuro para contact */
   --overlay-contact-dark: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.97) 0%,
-    rgba(0, 0, 0, 0.95) 10%,
-    rgba(0, 0, 0, 0.94) 40%,
-    rgba(0, 0, 0, 0.98) 100%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.88) 15%,
+    rgba(0, 0, 0, 0.82) 85%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+
+  --overlay-section-dark: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.75) 100%
   );
 }
 
-/* Utilidades */
+/* Accesibilidad y helpers */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -154,7 +153,7 @@ a {
   outline-offset: 3px;
 }
 
-/* Efecto de salto suave */
+/* Hover suave */
 .hover-zoom,
 .nav-link,
 .work-card,
@@ -180,7 +179,7 @@ a {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Layout global */
+/* Layout base */
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -200,7 +199,6 @@ body {
   overflow: hidden;
 }
 
-/* Fondos generales */
 .section--hero,
 .section--about,
 .section--works,
@@ -210,7 +208,7 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Header */
+/* Header y nav */
 .site-header {
   position: fixed;
   inset-inline: 0;
@@ -236,7 +234,6 @@ body {
   height: 48px;
 }
 
-/* Nav */
 .site-nav ul {
   list-style: none;
   display: flex;
@@ -288,7 +285,7 @@ body {
   margin-top: 0;
 }
 
-/* HERO: lateral + franja baja muy fina */
+/* Hero */
 .section--hero {
   padding-top: var(--header-height);
   background-image:
@@ -298,7 +295,6 @@ body {
   background-position: center, center, top right;
 }
 
-/* acercamos un poco el logo al borde izquierdo */
 .section--hero .container {
   padding-inline: 0.4rem var(--gutter);
 }
@@ -322,7 +318,7 @@ body {
   transform: translateY(-1px) scale(1.01);
 }
 
-/* WHO WE ARE */
+/* About */
 .section--about-g {
   background-image:
     var(--vignette-section),
@@ -364,7 +360,7 @@ body {
 }
 
 .about-copy {
-  background: rgba(0, 0, 0, 0.52);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 24px;
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-soft);
@@ -380,7 +376,6 @@ body {
   text-transform: uppercase;
 }
 
-/* Sólo el título de Who we are 2 a la derecha */
 .about-layout--reverse .about-copy h2 {
   text-align: right;
 }
@@ -410,29 +405,35 @@ body {
   box-shadow: var(--shadow-strong);
 }
 
-/* WHAT WE DO */
+/* Works */
 .section--works {
   background-image:
+    var(--overlay-section-dark),
     var(--vignette-section),
     var(--vignette-left-soft),
     url("assets/images/CRI05266.jpg");
-  background-position: center, left top, center;
-  background-size: cover, auto, cover;
+  background-position: center, center, left top, center;
+  background-size: cover, cover, auto, cover;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
-/* Banner WHAT WE DO (más grande, tipo WHO WE ARE) */
+/* Banner más grande */
 .works-banner {
   display: flex;
   justify-content: center;
-  margin-bottom: 2.2rem;
+  margin-bottom: 0.9rem;
+  max-height: 280px;
+  overflow: hidden;
 }
 
 .works-banner img {
-  max-width: min(1100px, 98%);
+  max-width: min(1600px, 100%);
   height: auto;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
-/* Título de sección (ahora oculto, pero lo usamos en otras secciones si hace falta) */
 .section-title {
   font-family: var(--font-title);
   text-align: center;
@@ -442,11 +443,16 @@ body {
   margin: 0 0 2rem;
 }
 
-/* Grid galería */
+/* Título un poco más abajo */
+.section-title--works {
+  margin-top: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
 }
 
 .work-card {
@@ -455,7 +461,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
   border-radius: var(--radius-card);
   border: 1px solid var(--border-soft);
-  padding: 1.1rem;
+  padding: 0.9rem;
   text-align: center;
   box-shadow: var(--shadow-soft);
 }
@@ -464,15 +470,15 @@ body {
   border-radius: 14px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
 }
 
 .work-card h3 {
   font-family: var(--font-title);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 1.2rem;
-  margin-bottom: 0.35rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
 }
 
 .work-card p {
@@ -482,7 +488,7 @@ body {
   margin: 0.25rem auto 0;
 }
 
-/* CONTACT (más oscuro en general) */
+/* Contact */
 .section--contact {
   background-image:
     var(--overlay-contact-dark),
@@ -502,7 +508,7 @@ body {
   max-width: 1100px;
   width: 100%;
   padding: 2rem 2.6rem;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.55);
   border-radius: var(--radius-card);
   border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-soft);
@@ -535,7 +541,6 @@ body {
   text-underline-offset: 2px;
 }
 
-/* Formulario */
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -555,7 +560,7 @@ body {
   padding: 0.8rem 0.9rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(0, 0, 0, 0.72);
   color: #fff;
   font-size: var(--fs-body);
 }
@@ -584,8 +589,8 @@ button {
   font-size: var(--fs-body);
   font-weight: 700;
   cursor: pointer;
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
   transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
 }
 
@@ -594,7 +599,7 @@ button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
-/* Social follow debajo del contact */
+/* Social + footer */
 .social-follow {
   margin-top: 2.4rem;
   text-align: center;
@@ -608,7 +613,6 @@ button:hover {
   margin-bottom: 0.8rem;
 }
 
-/* Footer */
 .site-footer {
   padding-block: 0.9rem;
   text-align: center;
@@ -726,11 +730,19 @@ button:hover {
   .social-links img {
     height: 40px;
   }
+
+  .works-banner {
+    max-height: 180px;
+  }
 }
 
 @media (max-width: 600px) {
   .section-title {
     font-size: 1.8rem;
+  }
+
+  .section-title--works {
+    font-size: 1.7rem;
   }
 
   .about-copy h2,
