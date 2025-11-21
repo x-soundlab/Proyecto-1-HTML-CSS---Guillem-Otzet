@@ -421,19 +421,15 @@ body {
   padding-bottom: 3rem;
 }
 
+/* Banner sencillo, que escala como los headers de WHO WE ARE */
 .works-banner {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.9rem;
-  max-height: 260px;
-  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto 0.9rem;
 }
 
 .works-banner img {
-  max-width: min(1600px, 100%);
+  width: 100%;
   height: auto;
-  margin-top: -10px;
-  margin-bottom: -10px;
 }
 
 /* Títulos de sección */
@@ -706,7 +702,7 @@ button:hover {
   }
 
   .hero-logo {
-    max-width: 92%;
+    max-width: 96%;
     margin-bottom: 1.5rem;
   }
 
@@ -739,23 +735,6 @@ button:hover {
     height: 40px;
   }
 
-  /* Banner WHAT WE DO en móvil: grande tipo cabecera WHO WE ARE */
-  .works-banner {
-    max-height: none;
-    overflow: hidden;
-    margin-bottom: 0.8rem;
-  }
-
-  .works-banner img {
-    width: 200%;
-    max-width: none;
-    height: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: -20%;
-  }
-
-  /* Contact más fluido en móvil */
   .section--contact > .container {
     align-items: stretch;
   }
@@ -803,12 +782,5 @@ button:hover {
 
   .social-links img {
     height: 34px;
-  }
-
-  /* En móviles muy pequeños, todavía un poco más grande el banner */
-  .works-banner img {
-    width: 230%;
-    max-width: none;
-    margin-left: -35%;
   }
 }
